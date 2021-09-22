@@ -66,15 +66,16 @@ export default {
   methods: {
     getHomeMultidata() {
       getHomeMultidata().then((res) => {
-        console.log(res);
+        console.log(res.data);
         this.banners = res.data.banner.list;
         this.recommends = res.data.recommend.list;
+        console.log(this.recommends);
       });
     },
     getHomeGoods(type) {
       const page = this.goods[type].page + 1;
       getHomeGoods(type, page).then((res) => {
-        console.log(res);
+        console.log(res.data);
         this.goods[type].list.push(...res.data.list);
         this.goods[type].page += 1;
 

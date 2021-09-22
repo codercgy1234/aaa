@@ -1,7 +1,7 @@
 <template>
   <div class="goods-item" @click="itemClick">
     <!-- <img :src="goodsItems.show.img" alt="" /> -->
-    <!-- 因为goodslist里的数据是show里的img，而recommend的数据是image，所以用计算属性来保存 -->
+    <!-- 因为goodslist里的数据是show里的img(res.data.list.show.img)，而recommend的数据是image（ res.data.recommend.list里的是image），所以用计算属性来保存 -->
     <img :src="showImage" alt="" />
     <div class="goods-info">
       <p>{{ goodsItems.title }}</p>
@@ -24,6 +24,7 @@ export default {
   },
   computed: {
     showImage() {
+      // 因为后台接口的问题，一个是img一个是image
       return this.goodsItems.image || this.goodsItems.show.img;
     },
   },

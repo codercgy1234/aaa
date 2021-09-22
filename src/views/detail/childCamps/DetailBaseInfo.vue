@@ -12,6 +12,8 @@
       <span>{{ goods.services[goods.services.length - 1].name }}</span>
     </div>
     <div class="info-service">
+      <!-- 不显示最后一张 -->
+      <!-- 这里的遍历是为了去掉最后一个index及其对应的实例 -->
       <span
         class="info-service-item"
         v-for="index in goods.services.length - 1"

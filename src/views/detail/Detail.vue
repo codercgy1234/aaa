@@ -76,7 +76,7 @@ export default {
       // console.log(this.topImages);
 
       const data = res.result;
-
+      // 传入实参数据
       this.goods = new Goods(
         data.itemInfo,
         data.columns,
@@ -103,20 +103,20 @@ export default {
   methods: {
     titleClick(index) {
       console.log(index);
-      this.themeTopYs = [];
-      this.themeTopYs.push(0);
-      this.themeTopYs.push(this.$refs.param.$el.offsetTop);
-      this.themeTopYs.push(this.$refs.comment.$el.offsetTop);
-      this.themeTopYs.push(this.$refs.recommend.$el.offsetTop);
+      // this.themeTopYs = [];
+      // this.themeTopYs.push(0);
+      // this.themeTopYs.push(this.$refs.param.$el.offsetTop);
+      // this.themeTopYs.push(this.$refs.comment.$el.offsetTop);
+      // this.themeTopYs.push(this.$refs.recommend.$el.offsetTop);
       // window.scroll(0, this.themeTopYs, 200);
-      window.scroll(0, this.themeTopYs[index], 200);
+      // window.scroll(0, this.themeTopYs[index], 200);
     },
-    handleScroll() {
-      console.log(111);
-      for (const k in this.themeTopYs) {
-        console.log(k);
-      }
-    },
+    // handleScroll() {
+    //   console.log(111);
+    //   for (const k in this.themeTopYs) {
+    //     console.log(k);
+    //   }
+    // },
     addToCart() {
       console.log("---------------------");
       // 获取购物车需要展示的信息

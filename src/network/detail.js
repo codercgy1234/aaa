@@ -14,6 +14,8 @@ export function getRecommend() {
 
     })
 }
+
+// 这些玩意本质是在vue组件的script操作的
 export class Goods {
     constructor(itemInfo, columns, services) {
         this.title = itemInfo.title
